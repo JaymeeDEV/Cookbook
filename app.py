@@ -13,8 +13,7 @@ db = client.cookbookdb
 
 
 @app.route('/')
-@app.route('/get_recipes')
-def get_recipes():
+def index():
     return render_template("index.html", recipes=db.recipes.find())
 
 
