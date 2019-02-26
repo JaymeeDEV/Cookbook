@@ -1,17 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis");
 /*All colours stored in an array*/
 /*Function uses colours from the 'colors' array*/
-body,
-html {
-  height: 100%;
-}
-
 body {
-  background-image: url("../img/background-img.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../img/background-img-main.jpg");
   background-position: center;
   background-size: cover;
   font-family: "Dosis", cursive;
-  margin: 0;
+}
+
+.collapse {
+  padding-right: 110px;
+}
+
+.container-fluid .row .col-sm-12 .mainTitle {
+  padding: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.container-fluid .row .col-sm-12 .innerCol .card {
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-width: 10px;
+}
+
+.container-fluid .row .col-sm-12 .innerCol .card-img-overlay .card-title {
+  color: #ffefc1;
 }
 /*# sourceMappingURL=style.css.map */

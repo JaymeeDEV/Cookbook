@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis");
-$bg: url("../img/background-img.jpg");
+$bg: url("../img/background-img-main.jpg");
 
 /*All colours stored in an array*/
 $colors: (
@@ -11,16 +11,35 @@ $colors: (
   @return map-get($colors, $all-colors);
 }
 
-body,
-html {
-  height: 100%;
-}
-
 body {
   background-image: $bg;
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   font-family: "Dosis", cursive;
-  margin: 0;
+}
+.collapse {
+  padding-right: 110px;
+}
+
+.container-fluid {
+  .row {
+    .col-sm-12 {
+      .mainTitle {
+        padding: 20px;
+        font-weight: bold;
+        line-height: 1.2;
+      }
+      .innerCol {
+        .card {
+          border: 1px solid rgba(0, 0, 0, 0);
+          border-width: 10px;
+        }
+        .card-img-overlay {
+          .card-title {
+            color: color(cardTitle);
+          }
+        }
+      }
+    }
+  }
 }
