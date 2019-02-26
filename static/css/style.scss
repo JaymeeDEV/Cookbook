@@ -1,1 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis");
+$bg: url("../img/background-img.jpg");
+
+/*All colours stored in an array*/
+$colors: (
+  cardTitle: #ffefc1
+);
+
+/*Function uses colours from the 'colors' array*/
+@function color($all-colors) {
+  @return map-get($colors, $all-colors);
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background-image: $bg;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Dosis", cursive;
+  margin: 0;
+}
