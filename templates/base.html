@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Cookbook</title>
+    <!-- Importing Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <!-- Importing style.css -->
     <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand mx-auto" href="index.html">Personal Cookbook</a>
+        <a class="navbar-brand mx-auto" href="{{ url_for('index')"
+          >Personal Cookbook</a
+        >
         <button
           class="navbar-toggler navbar-toggler-icon"
           type="button"
@@ -23,13 +27,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="{{ url_for('index') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Popular</a>
+              <a class="nav-link" href="{{ url_for('popular') }}">Popular</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
             </li>
           </ul>
         </div>
@@ -44,34 +48,40 @@
             </h2>
           </div>
           <div class="col-sm-12 innerCol">
-            <img
-              src="../static/img/breakfast.jpg"
-              class="card-img"
-              alt="Breakfast Image"
-            />
-            <div class="card-img-overlay text-center">
-              <h2 class="card-title">Breakfast</h2>
-            </div>
+            <a href="#">
+              <img
+                src="../static/img/breakfast.jpg"
+                class="card-img"
+                alt="Breakfast Image"
+              />
+              <div class="card-img-overlay text-center">
+                <h2 class="card-title">Breakfast</h2>
+              </div>
+            </a>
           </div>
           <div class="col-sm-12 innerCol">
-            <img
-              src="../static/img/Lunch.jpg"
-              class="card-img"
-              alt="Lunch Image"
-            />
-            <div class="card-img-overlay text-center">
-              <h2 class="card-title">Lunch</h2>
-            </div>
+            <a href="#">
+              <img
+                src="../static/img/Lunch.jpg"
+                class="card-img"
+                alt="Lunch Image"
+              />
+              <div class="card-img-overlay text-center">
+                <h2 class="card-title">Lunch</h2>
+              </div>
+            </a>
           </div>
           <div class="col-sm-12 innerCol">
-            <img
-              src="../static/img/Dinner.jpg"
-              class="card-img"
-              alt="Dinner Image"
-            />
-            <div class="card-img-overlay text-center">
-              <h2 class="card-title">Dinner</h2>
-            </div>
+            <a href="#">
+              <img
+                src="../static/img/Dinner.jpg"
+                class="card-img"
+                alt="Dinner Image"
+              />
+              <div class="card-img-overlay text-center">
+                <h2 class="card-title">Dinner</h2>
+              </div>
+            </a>
           </div>
         </div>
         <div class="col-sm-12 col-md-6">
@@ -81,11 +91,13 @@
             </h2>
           </div>
           <div class="col-sm-12">
-            <img
-              src="../static/img/snack.jpg"
-              class="card-img"
-              alt="Breakfast Image"
-            />
+            <a href="#">
+              <img
+                src="../static/img/snack.jpg"
+                class="card-img"
+                alt="Snacks Image"
+              />
+            </a>
           </div>
           <div class="col-sm-12">
             <h2 class="mainTitle text-center text-white">
@@ -93,17 +105,22 @@
             </h2>
           </div>
           <div class="col-sm-12">
-            <img
-              src="../static/img/popular.jpg"
-              class="card-img"
-              alt="Breakfast Image"
-            />
+            <a href="#">
+              <img
+                src="../static/img/popular.jpg"
+                class="card-img"
+                alt="Popular Link Image"
+              />
+            </a>
           </div>
         </div>
       </div>
     </div>
+    <!-- Importing jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Importing Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <!-- Importing Bootstrap core JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>

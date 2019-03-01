@@ -17,6 +17,16 @@ def index():
     return render_template("index.html", recipes=db.recipes.find())
 
 
+@app.route('/popular')
+def popular():
+    return render_template("popular.html")
+
+
+@app.route('/contact')
+def contact():
+    return render_template("contact.html")
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=(os.environ.get('PORT')),
