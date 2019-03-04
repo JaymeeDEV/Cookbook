@@ -9,13 +9,16 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <!-- Removes Favicon 404 error from console -->
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
     <!-- Importing style.css -->
     <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
   </head>
+  <!-- Navigation -->
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand mx-auto" href="{{ url_for('index')"
+        <a class="navbar-brand mx-auto" href="{{ url_for('index') }}"
           >Personal Cookbook</a
         >
         <button
@@ -39,83 +42,6 @@
         </div>
       </div>
     </nav>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <div class="col-sm-12">
-            <h2 class="mainTitle text-center text-white">
-              What Meal Are You Having Today?
-            </h2>
-          </div>
-          <div class="col-sm-12 innerCol">
-            <a href="#">
-              <img
-                src="../static/img/breakfast.jpg"
-                class="card-img"
-                alt="Breakfast Image"
-              />
-              <div class="card-img-overlay text-center">
-                <h2 class="card-title">Breakfast</h2>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 innerCol">
-            <a href="#">
-              <img
-                src="../static/img/Lunch.jpg"
-                class="card-img"
-                alt="Lunch Image"
-              />
-              <div class="card-img-overlay text-center">
-                <h2 class="card-title">Lunch</h2>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 innerCol">
-            <a href="#">
-              <img
-                src="../static/img/Dinner.jpg"
-                class="card-img"
-                alt="Dinner Image"
-              />
-              <div class="card-img-overlay text-center">
-                <h2 class="card-title">Dinner</h2>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <div class="col-sm-12">
-            <h2 class="mainTitle text-center text-white">
-              Fancy A Snack Instead?
-            </h2>
-          </div>
-          <div class="col-sm-12">
-            <a href="#">
-              <img
-                src="../static/img/snack.jpg"
-                class="card-img"
-                alt="Snacks Image"
-              />
-            </a>
-          </div>
-          <div class="col-sm-12">
-            <h2 class="mainTitle text-center text-white">
-              Our Most Popular Recipes
-            </h2>
-          </div>
-          <div class="col-sm-12">
-            <a href="#">
-              <img
-                src="../static/img/popular.jpg"
-                class="card-img"
-                alt="Popular Link Image"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Importing jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <!-- Importing Popper -->
@@ -124,3 +50,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>
+{% block content %} {% endblock %}

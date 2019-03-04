@@ -3,19 +3,24 @@ $bg: url("../img/background-img-main.jpg");
 
 /*All colours stored in an array*/
 $colors: (
-  cardTitle: #ffefc1
+  cardTitle: #ffefc1,
+  button: #353d44,
+  hoverButton: #0095ff
 );
 
 /*Function uses colours from the 'colors' array*/
 @function color($all-colors) {
   @return map-get($colors, $all-colors);
 }
-
+/*General style rules*/
+html,
 body {
   background-image: $bg;
   background-position: center;
   background-size: cover;
   font-family: "Dosis", cursive;
+  margin: 0;
+  padding: 0;
 }
 .collapse {
   padding-right: 110px;
@@ -24,6 +29,7 @@ body {
 .container-fluid {
   .row {
     .col-sm-12 {
+      //index.html
       .mainTitle {
         padding: 20px;
         font-weight: bold;
@@ -38,6 +44,26 @@ body {
         .card-img-overlay {
           .card-title {
             color: color(cardTitle);
+          }
+        }
+      }
+      //contact.html
+      .mar {
+        margin: 20px;
+      }
+      form {
+        .control-group {
+          padding: 8px;
+        }
+        .form-group {
+          .btn {
+            width: 100%;
+            background-color: color(button);
+            border-color: color(button);
+            transition-duration: 0.5s;
+          }
+          .btn:hover {
+            background-color: color(hoverButton);
           }
         }
       }

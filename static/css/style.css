@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis");
 /*All colours stored in an array*/
 /*Function uses colours from the 'colors' array*/
+/*General style rules*/
+html,
 body {
   background-image: url("../img/background-img-main.jpg");
   background-position: center;
   background-size: cover;
   font-family: "Dosis", cursive;
+  margin: 0;
+  padding: 0;
 }
 
 .collapse {
@@ -29,5 +33,25 @@ body {
 
 .container-fluid .row .col-sm-12 .innerCol .card-img-overlay .card-title {
   color: #ffefc1;
+}
+
+.container-fluid .row .col-sm-12 .mar {
+  margin: 20px;
+}
+
+.container-fluid .row .col-sm-12 form .control-group {
+  padding: 8px;
+}
+
+.container-fluid .row .col-sm-12 form .form-group .btn {
+  width: 100%;
+  background-color: #353d44;
+  border-color: #353d44;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.container-fluid .row .col-sm-12 form .form-group .btn:hover {
+  background-color: #0095ff;
 }
 /*# sourceMappingURL=style.css.map */
