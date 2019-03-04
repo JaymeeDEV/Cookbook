@@ -22,7 +22,7 @@ def popular():
     return render_template("popular.html")
 
 
-@app.route('/contact')
+@app.route('/contact', methods=['POST', 'GET'])
 def contact():
     return render_template("contact.html")
 

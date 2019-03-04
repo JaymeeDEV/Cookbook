@@ -7,7 +7,7 @@
         will get back to you as soon as possible!
       </h3>
 
-      <form>
+      <form onsubmit="return sendMail(this);" method="POST">
         <div class="control-group">
           <div class="form-group floating-label-form-group controls">
             <input
@@ -62,4 +62,5 @@
     </div>
   </div>
 </div>
-{% endblock %}
+<script src="../static/js/contact.js"></script>
+>+ {% endblock %}
