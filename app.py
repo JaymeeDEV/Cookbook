@@ -11,15 +11,24 @@ app.config.from_object(Config)
 client = MongoClient(Config.MONGO_URI)
 db = client.cookbookdb
 
+"""
+User Authentication
+"""
+
 
 @app.route('/')
 def index():
-    return render_template("index.html", recipes=db.recipes.find())
+    return render_template("index.html")
 
 
 @app.route('/popular')
 def popular():
     return render_template("popular.html")
+
+
+@app.route('/register')
+def register():
+    return render_template("register.html")
 
 
 @app.route('/contact', methods=['POST', 'GET'])
