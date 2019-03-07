@@ -28,7 +28,7 @@ def popular():
 
 @app.route('/register')
 def register():
-    return render_template("register.html")
+    return render_template("register.html", methods=['POST', 'GET'])
 
 
 @app.route('/contact', methods=['POST', 'GET'])
