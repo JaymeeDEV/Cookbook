@@ -1,62 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Cookbook</title>
+    <!-- Importing Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- Importing Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    />
+    <!-- Removes Favicon 404 error from console -->
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <!-- Importing style.css -->
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <!-- Importing EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"
+    ></script>
+    <!-- Connecting EmailJS to user profile-->
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("user_LspWIvXYABJGlVm6Mvj6B");
+      })();
+    </script>
+  </head>
+  <!-- Navigation -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal Cookbook</title>
-  <!-- Importing Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <!-- Removes Favicon 404 error from console -->
-  <link rel="icon" href="data:;base64,iVBORwOKGO=" />
-  <!-- Importing style.css -->
-  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
-  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("user_LspWIvXYABJGlVm6Mvj6B");
-    })();
-  </script>
-</head>
-<!-- Navigation -->
-
-<body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand mx-auto" href="{{ url_for('index') }}">Personal Cookbook</a>
-      <button class="navbar-toggler navbar-toggler-icon" type="button" data-toggle="collapse"
-        data-target="#navbarResponsive"></button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('popular') }}">Popular</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
-          </li>
-          {% if not "username" in session %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('register') }}">Register</a>
-          </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
-          </li>
-          {% endif %}
-        </ul>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-auto" href="{{ url_for('index') }}"
+          >Personal Cookbook</a
+        >
+        <button
+          class="navbar-toggler navbar-toggler-icon"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+        ></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('popular') }}">Popular</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+            </li>
+            {% if not "username" in session %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!-- Importing jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <!-- Importing Popper -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <!-- Importing Bootstrap core JavaScript -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
-
+    </nav>
+    <!-- Importing jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Importing Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <!-- Importing Bootstrap core JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
 </html>
 {% block content %} {% endblock %}
