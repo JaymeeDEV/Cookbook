@@ -54,4 +54,19 @@ body {
 .container-fluid .row .col-sm-12 form .form-group .btn:hover {
   background-color: #0095ff;
 }
+
+.container-fluid .row .col-sm-12 .customBorder {
+  margin-top: 10px;
+  border: 1.5px solid white;
+  width: 25%;
+}
+
+.container-fluid .row .col-sm-12 .customBorder h3 {
+  display: inline;
+}
+
+.container-fluid .row .col-sm-12 .customBorder .fas {
+  font-size: 25px;
+  color: white;
+}
 /*# sourceMappingURL=style.css.map */

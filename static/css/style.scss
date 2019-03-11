@@ -67,6 +67,20 @@ body {
           }
         }
       }
+      //register.html
+      //popular.html
+      .customBorder {
+        margin-top: 10px;
+        border: 1.5px solid white;
+        width: 25%;
+        h3 {
+          display: inline;
+        }
+        .fas {
+          font-size: 25px;
+          color: white;
+        }
+      }
     }
   }
 }
