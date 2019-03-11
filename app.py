@@ -20,7 +20,8 @@ def index():
 
 @app.route('/popular')
 def popular():
-    return render_template("popular.html")
+
+    return render_template("popular.html", recipes=db.recipes.find())
 
 
 @app.route('/register', methods=['POST', 'GET'])
