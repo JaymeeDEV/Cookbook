@@ -13,12 +13,12 @@ client = MongoClient(Config.MONGO_URI)
 db = client.cookbookdb
 
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def index():
     return render_template("index.html")
 
 
-@app.route('/popular')
+@app.route('/popular', methods=['POST', 'GET'])
 def popular():
     return render_template("popular.html")
 
@@ -49,7 +49,7 @@ def contact():
     return render_template("contact.html")
 
 
-@app.route('/logout')
+@app.route('/logout', methods=['POST', 'GET'])
 def logout():
     session.clear()
     return redirect(url_for('index'))
@@ -57,17 +57,17 @@ def logout():
     """ Recipe Pages"""
 
 
-@app.route('/chocolatebananasmoothie')
+@app.route('/chocolatebananasmoothie', methods=['POST', 'GET'])
 def chocbansmoothie():
     return render_template("chocbansmoothie.html", recipes=db.recipes.find())
 
 
-@app.route('/blueberrypancakes')
+@app.route('/blueberrypancakes', methods=['POST', 'GET'])
 def blueberrypancakes():
     return render_template("blueberrypancakes.html", recipes=db.recipes.find())
 
 
-@app.route('/broccolimacandcheese')
+@app.route('/broccolimacandcheese', methods=['POST', 'GET'])
 def broccolimacandcheese():
     return render_template("brocmacandcheese.html", recipes=db.recipes.find())
 
