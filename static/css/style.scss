@@ -3,7 +3,7 @@ $bg: url("../img/background-img-main.jpg");
 
 /*All colours stored in an array*/
 $colors: (
-  cardTitle: #ffefc1,
+  cardTitle: #ffffff,
   button: #353d44,
   hoverButton: #0095ff
 );
@@ -43,6 +43,7 @@ body {
         }
         .card-img-overlay {
           .card-title {
+            margin-top: 50px;
             color: color(cardTitle);
           }
         }
@@ -69,17 +70,11 @@ body {
       }
       //register.html
       //popular.html
-      .customBorder {
-        margin-top: 20px;
-        border: 1.5px solid white;
-        width: 22%;
-        h4 {
-          display: inline;
-        }
-        .fas {
-          font-size: 25px;
-          color: white;
-        }
+      .col-sm-7 > a > img {
+        content: "";
+        background-attachment: fixed;
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
       }
     }
   }

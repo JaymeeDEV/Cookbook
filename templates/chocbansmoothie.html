@@ -1,0 +1,51 @@
+{% for recipe_name in recipes %}
+      <h3 class="text-white">
+        {{ recipe_name.recipe_name }}</br>{{ recipe_name.ingredients }}</br>{{ recipe_name.method }}</br>{{ recipe_name.optional }}
+      </h3>
+      {% endfor %}
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-9">
+            <div class="col-sm-7 offset-sm-5">
+              <h2 class="mainTitle text-center text-white">
+                What Meal Are You Having Today?
+              </h2>
+            </div>
+            <div class="col-sm-7 offset-sm-5 innerCol">
+              <a href="#">
+                <img
+                  src="../static/img/breakfast.jpg"
+                  class="card-img"
+                  alt="Breakfast Image"
+                />
+                <div class="card-img-overlay text-center">
+                  <h2 class="card-title">Chocolate and Banana Smoothie</h2>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-7 offset-sm-5 innerCol">
+              <a href="#">
+                <img
+                  src="../static/img/Lunch.jpg"
+                  class="card-img"
+                  alt="Lunch Image"
+                />
+                <div class="card-img-overlay text-center">
+                  <h2 class="card-title">Banana and Blueberry Pancakes</h2>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-7 offset-sm-5 innerCol">
+              <a href="#">
+                <img
+                  src="../static/img/Dinner.jpg"
+                  class="card-img"
+                  alt="Dinner Image"
+                />
+                <div class="card-img-overlay text-center">
+                  <h2 class="card-title">Broccoli Mac and Cheese</h2>
+                </div>
+              </a>
+            </div>
+          </div>

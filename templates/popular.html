@@ -1,18 +1,54 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <div class="customBorder col-sm-12">
-        <i class="fas fa-plus-circle"></i>
-        <h4 class="text-white">Add Recipe</h4>
+    <div class="col-sm-12 col-md-9">
+      <div class="col-sm-7 offset-sm-5">
+        <h2 class="mainTitle text-center text-white">
+          Everyone Loves These!
+        </h2>
       </div>
-      {% for recipe_name in recipes %}
-      <h3 class="text-white">
-        {{ recipe_name.recipe_name }}</br>{{ recipe_name.ingredients }}</br>{{ recipe_name.method }}</br>{{ recipe_name.optional }}
-      </h3>
-      {% endfor %}
+      <div class="col-sm-7 offset-sm-5 innerCol">
+        <a href="#">
+          <img
+            src="../static/img/chocolateBananaSmoothie.jpg"
+            class="card-img"
+            alt="Breakfast Image"
+          />
+          <div class="card-img-overlay text-center">
+            <h2 class="card-title">
+              <strong>Chocolate and Banana Smoothie</strong>
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-7 offset-sm-5 innerCol">
+        <a href="#">
+          <img
+            src="../static/img/blueberryPancakes.jpg"
+            class="card-img"
+            alt="Lunch Image"
+          />
+          <div class="card-img-overlay text-center">
+            <h2 class="card-title">
+              <strong>Banana and Blueberry Pancakes</strong>
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-7 offset-sm-5 innerCol">
+        <a href="#">
+          <img
+            src="../static/img/macAndCheese.jpg"
+            class="card-img"
+            alt="Dinner Image"
+          />
+          <div class="card-img-overlay text-center">
+            <h2 class="card-title"><strong>Broccoli Mac and Cheese</strong></h2>
+          </div>
+        </a>
+      </div>
     </div>
+
+    {% endblock %}
   </div>
 </div>
-
-{% endblock %}

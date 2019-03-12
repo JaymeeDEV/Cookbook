@@ -32,7 +32,8 @@ body {
 }
 
 .container-fluid .row .col-sm-12 .innerCol .card-img-overlay .card-title {
-  color: #ffefc1;
+  margin-top: 50px;
+  color: #ffffff;
 }
 
 .container-fluid .row .col-sm-12 .mar {
@@ -55,18 +56,10 @@ body {
   background-color: #0095ff;
 }
 
-.container-fluid .row .col-sm-12 .customBorder {
-  margin-top: 20px;
-  border: 1.5px solid white;
-  width: 22%;
-}
-
-.container-fluid .row .col-sm-12 .customBorder h4 {
-  display: inline;
-}
-
-.container-fluid .row .col-sm-12 .customBorder .fas {
-  font-size: 25px;
-  color: white;
+.container-fluid .row .col-sm-12 .col-sm-7 > a > img {
+  content: "";
+  background-attachment: fixed;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
 }
 /*# sourceMappingURL=style.css.map */
