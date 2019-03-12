@@ -20,8 +20,7 @@ def index():
 
 @app.route('/popular')
 def popular():
-
-    return render_template("popular.html", recipes=db.recipes.find())
+    return render_template("popular.html")
 
 
 @app.route('/register', methods=['POST', 'GET'])
@@ -54,6 +53,23 @@ def contact():
 def logout():
     session.clear()
     return redirect(url_for('index'))
+
+    """ Recipe Pages"""
+
+
+@app.route('/chocolatebananasmoothie')
+def chocbansmoothie():
+    return render_template("chocbansmoothie.html", recipes=db.recipes.find())
+
+
+@app.route('/blueberrypancakes')
+def blueberrypancakes():
+    return render_template("blueberrypancakes.html", recipes=db.recipes.find())
+
+
+@app.route('/broccolimacandcheese')
+def broccolimacandcheese():
+    return render_template("brocmacandcheese.html", recipes=db.recipes.find())
 
 
 if __name__ == '__main__':
