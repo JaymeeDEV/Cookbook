@@ -4,7 +4,8 @@
 $colors: (
   cardTitle: #ffffff,
   button: #353d44,
-  hoverButton: #0095ff
+  hoverButton: #0095ff,
+  navText: #fffff0
 );
 
 /*Function uses colours from the 'colors' array*/
@@ -20,17 +21,49 @@ body {
   padding: 0;
 }
 
+// Creating a horizontal navbar
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  left: 30px;
+  top: 0;
+  z-index: 1;
+  padding-top: 45px;
+  overflow-x: hidden;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  font-size: 18px;
+  display: block;
+  color: color(navText);
+}
+
+.navText {
+  color: color(navText);
+}
+
+.main-title {
+  padding-bottom: 100px !important;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
 // Navbar font-sizes
 .navbar-brand {
-  font-size: 23px;
+  font-size: 23px !important;
 }
 
 .nav-link {
   font-size: 18px;
-}
-
-.collapse {
-  padding-right: 110px;
 }
 
 .container-fluid {
