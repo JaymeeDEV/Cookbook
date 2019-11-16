@@ -4,9 +4,7 @@
 /*General style rules*/
 html,
 body {
-  background-image: url("../img/background-img-main.jpg");
-  background-position: center;
-  background-size: cover;
+  background-color: #32363c;
   font-family: "Dosis", cursive;
   margin: 0;
   padding: 0;

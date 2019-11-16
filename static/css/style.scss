@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis");
-$bg: url("../img/background-img-main.jpg");
 
 /*All colours stored in an array*/
 $colors: (
@@ -15,9 +14,7 @@ $colors: (
 /*General style rules*/
 html,
 body {
-  background-image: $bg;
-  background-position: center;
-  background-size: cover;
+  background-color: #32363c;
   font-family: "Dosis", cursive;
   margin: 0;
   padding: 0;
