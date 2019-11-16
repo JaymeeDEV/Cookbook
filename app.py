@@ -64,17 +64,17 @@ def logout():
 
 @app.route('/chocolatebananasmoothie', methods=['POST', 'GET'])
 def chocbansmoothie():
-    return render_template("chocbansmoothie.html", recipes=db.recipes.find())
+    return render_template("snacks/chocbansmoothie.html", recipes=db.recipes.find())
 
 
 @app.route('/blueberrypancakes', methods=['POST', 'GET'])
 def blueberrypancakes():
-    return render_template("blueberrypancakes.html", recipes=db.recipes.find())
+    return render_template("breakfast/blueberrypancakes.html", recipes=db.recipes.find())
 
 
 @app.route('/broccolimacandcheese', methods=['POST', 'GET'])
 def broccolimacandcheese():
-    return render_template("brocmacandcheese.html", recipes=db.recipes.find())
+    return render_template("dinner/brocmacandcheese.html", recipes=db.recipes.find())
 
 
 if __name__ == '__main__':
