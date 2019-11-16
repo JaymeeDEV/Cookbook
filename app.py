@@ -18,9 +18,19 @@ def index():
     return render_template("index.html")
 
 
+@app.route('/products', methods=['POST', 'GET'])
+def products():
+    return render_template("products.html")
+
+
 @app.route('/popular', methods=['POST', 'GET'])
 def popular():
     return render_template("popular.html")
+
+
+@app.route('/contact', methods=['POST', 'GET'])
+def contact():
+    return render_template("contact.html")
 
 
 @app.route('/register', methods=['POST', 'GET'])
@@ -42,11 +52,6 @@ def register():
             return redirect(url_for('index'))
     else:
         return render_template("register.html")
-
-
-@app.route('/contact', methods=['POST', 'GET'])
-def contact():
-    return render_template("contact.html")
 
 
 @app.route('/logout', methods=['POST', 'GET'])

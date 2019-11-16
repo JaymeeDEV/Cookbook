@@ -12,6 +12,14 @@ body {
   padding: 0;
 }
 
+.navbar-brand {
+  font-size: 23px;
+}
+
+.nav-link {
+  font-size: 18px;
+}
+
 .collapse {
   padding-right: 110px;
 }
