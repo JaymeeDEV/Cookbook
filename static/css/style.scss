@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis");
 
-/*All colours stored in an array*/
+/* Colours Stored In An Array*/
 $colors: (
   cardTitle: #ffffff,
   button: #353d44,
@@ -8,11 +8,12 @@ $colors: (
   navText: #fffff0
 );
 
-/*Function uses colours from the 'colors' array*/
+/*Function Uses 'Colors' Array*/
 @function color($all-colors) {
   @return map-get($colors, $all-colors);
 }
-/*General style rules*/
+
+/* General Style Rules*/
 html,
 body {
   background-color: #32363c;
@@ -21,7 +22,7 @@ body {
   padding: 0;
 }
 
-// Creating a horizontal navbar
+// Horizontal Navbar
 .sidenav {
   height: 100%;
   width: 200px;
@@ -57,7 +58,6 @@ body {
   }
 }
 
-// Navbar font-sizes
 .navbar-brand {
   font-size: 23px !important;
 }
@@ -70,22 +70,11 @@ body {
   .row {
     .col-sm-12 {
       //index.html
-      .mainTitle {
-        padding: 20px;
-        font-weight: bold;
-        line-height: 1.2;
-      }
       .innerCol {
         margin-bottom: 30px;
         .card {
           border: 1px solid rgba(0, 0, 0, 0);
           border-width: 10px;
-        }
-        .card-img-overlay {
-          .card-title {
-            margin-top: 50px;
-            color: color(cardTitle);
-          }
         }
       }
       //contact.html

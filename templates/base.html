@@ -38,7 +38,6 @@
         >Personal Cookbook</a
       >
       <a href="{{ url_for('products') }}">Products</a>
-      <a href="{{ url_for('contact') }}">Contact Us</a>
       <br />
       <p class="lead navText pl-3">Recipes</p>
       <a href="{{ url_for('popular') }}">Popular</a>
@@ -47,6 +46,8 @@
       <a href="#">Dinner</a>
       <a href="#">Add Recipe</a>
       <br />
+      <br />
+      <a href="{{ url_for('contact') }}">Contact Us</a>
       <br />
       {% if not "username" in session %}
       <a href="{{ url_for('register') }}">Join/Login</a>

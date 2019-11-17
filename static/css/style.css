@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis");
-/*All colours stored in an array*/
-/*Function uses colours from the 'colors' array*/
-/*General style rules*/
+/* Colours Stored In An Array*/
+/*Function Uses 'Colors' Array*/
+/* General Style Rules*/
 html,
 body {
   background-color: #32363c;
@@ -53,12 +53,6 @@ body {
   font-size: 18px;
 }
 
-.container-fluid .row .col-sm-12 .mainTitle {
-  padding: 20px;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
 .container-fluid .row .col-sm-12 .innerCol {
   margin-bottom: 30px;
 }
@@ -66,11 +60,6 @@ body {
 .container-fluid .row .col-sm-12 .innerCol .card {
   border: 1px solid rgba(0, 0, 0, 0);
   border-width: 10px;
-}
-
-.container-fluid .row .col-sm-12 .innerCol .card-img-overlay .card-title {
-  margin-top: 50px;
-  color: #ffffff;
 }
 
 .container-fluid .row .col-sm-12 .mar {
