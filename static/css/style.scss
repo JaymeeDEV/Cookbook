@@ -66,9 +66,13 @@ body {
   font-size: 18px;
 }
 
+.setup-container {
+  margin-top: 100px;
+}
+
 .container-fluid {
   .row {
-    .col-sm-12 {
+    .col-5 {
       //index.html
       .innerCol {
         margin-bottom: 30px;
@@ -76,10 +80,6 @@ body {
           border: 1px solid rgba(0, 0, 0, 0);
           border-width: 10px;
         }
-      }
-      //contact.html
-      .mar {
-        margin: 20px;
       }
       form {
         .control-group {

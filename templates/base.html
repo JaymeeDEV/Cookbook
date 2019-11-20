@@ -49,11 +49,7 @@
       <br />
       <a href="{{ url_for('contact') }}">Contact Us</a>
       <br />
-      {% if not "username" in session %}
-      <a href="{{ url_for('register') }}">Join/Login</a>
-      {% else %}
-      <a href="{{ url_for('logout') }}">Logout</a>
-      {% endif %}
+      <a href="#">(Search Bar)</a>
     </div>
     <div class="container-fluid">
       {% block content %} {% endblock %}
