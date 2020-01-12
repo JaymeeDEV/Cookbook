@@ -89,6 +89,16 @@ def broccolimacandcheese():
     return render_template("dinner/brocmacandcheese.html", recipes=db.recipes.find())
 
 
+@app.route('/chickenstew', methods=['POST', 'GET'])
+def chickenstew():
+    return render_template("dinner/chickenstew.html", recipes=db.recipes.find())
+
+
+@app.route('/steakandpotato', methods=['POST', 'GET'])
+def steakandpotato():
+    return render_template("dinner/steakpotato.html", recipes=db.recipes.find())
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=(os.environ.get('PORT')),
