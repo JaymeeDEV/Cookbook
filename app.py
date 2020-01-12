@@ -48,20 +48,65 @@ def contact():
 
     """ Recipe Pages"""
 
-
+# Snacks
 @app.route('/chocolatebananasmoothie', methods=['POST', 'GET'])
 def chocbansmoothie():
     return render_template("snacks/chocbansmoothie.html", recipes=db.recipes.find())
 
 
+@app.route('/perfectpancakes', methods=['POST', 'GET'])
+def perfectpancakes():
+    return render_template("snacks/perfectpancakes.html", recipes=db.recipes.find())
+
+
+@app.route('/hotcrossbuns', methods=['POST', 'GET'])
+def hotcrossbuns():
+    return render_template("snacks/hotcrossbuns.html", recipes=db.recipes.find())
+
+# Breakfast
 @app.route('/blueberrypancakes', methods=['POST', 'GET'])
 def blueberrypancakes():
     return render_template("breakfast/blueberrypancakes.html", recipes=db.recipes.find())
 
 
+@app.route('/chocolatebananaporridge', methods=['POST', 'GET'])
+def chocolatebananaporridge():
+    return render_template("breakfast/chocobanporridge.html", recipes=db.recipes.find())
+
+
+@app.route('/breakfastberryparfait', methods=['POST', 'GET'])
+def breakfastberryparfait():
+    return render_template("breakfast/berryparfait.html", recipes=db.recipes.find())
+
+# Lunch
+@app.route('/cauliflowercheesesoup', methods=['POST', 'GET'])
+def cauliflowercheesesoup():
+    return render_template("lunch/caulicheesesoup.html", recipes=db.recipes.find())
+
+
+@app.route('/wildricesalad', methods=['POST', 'GET'])
+def wildricesalad():
+    return render_template("lunch/wildricesalad.html", recipes=db.recipes.find())
+
+
+@app.route('/crunchypestochicken', methods=['POST', 'GET'])
+def crunchypestochicken():
+    return render_template("lunch/pestochickencous.html", recipes=db.recipes.find())
+
+# Dinner
 @app.route('/broccolimacandcheese', methods=['POST', 'GET'])
 def broccolimacandcheese():
     return render_template("dinner/brocmacandcheese.html", recipes=db.recipes.find())
+
+
+@app.route('/chickenstew', methods=['POST', 'GET'])
+def chickenstew():
+    return render_template("dinner/chickenstew.html", recipes=db.recipes.find())
+
+
+@app.route('/steakandpotato', methods=['POST', 'GET'])
+def steakandpotato():
+    return render_template("dinner/steakpotato.html", recipes=db.recipes.find())
 
 
 if __name__ == '__main__':
