@@ -69,6 +69,19 @@ def breakfastberryparfait():
     return render_template("breakfast/berryparfait.html", recipes=db.recipes.find())
 
 # Lunch
+@app.route('/cauliflowercheesesoup', methods=['POST', 'GET'])
+def cauliflowercheesesoup():
+    return render_template("lunch/caulicheesesoup.html", recipes=db.recipes.find())
+
+
+@app.route('/wildricesalad', methods=['POST', 'GET'])
+def wildricesalad():
+    return render_template("lunch/wildricesalad.html", recipes=db.recipes.find())
+
+
+@app.route('/crunchypestochicken', methods=['POST', 'GET'])
+def crunchypestochicken():
+    return render_template("lunch/pestochickencous.html", recipes=db.recipes.find())
 
 # Dinner
 @app.route('/broccolimacandcheese', methods=['POST', 'GET'])
