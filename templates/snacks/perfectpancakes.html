@@ -1,0 +1,5 @@
+{% for recipe_name in recipes %}
+      <h3 class="text-white">
+        {{ recipe_name.recipe_name }}</br>{{ recipe_name.ingredients }}</br>{{ recipe_name.method }}
+      </h3>
+      {% endfor %}

@@ -53,6 +53,16 @@ def contact():
 def chocbansmoothie():
     return render_template("snacks/chocbansmoothie.html", recipes=db.recipes.find())
 
+
+@app.route('/perfectpancakes', methods=['POST', 'GET'])
+def perfectpancakes():
+    return render_template("snacks/perfectpancakes.html", recipes=db.recipes.find())
+
+
+@app.route('/hotcrossbuns', methods=['POST', 'GET'])
+def hotcrossbuns():
+    return render_template("snacks/hotcrossbuns.html", recipes=db.recipes.find())
+
 # Breakfast
 @app.route('/blueberrypancakes', methods=['POST', 'GET'])
 def blueberrypancakes():
