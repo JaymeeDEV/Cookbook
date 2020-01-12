@@ -3,3 +3,4 @@ __pycache__
 .flaskenv
 node_modules
 package-lock.json
+.vscode

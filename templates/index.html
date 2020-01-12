@@ -1,79 +1,68 @@
 {% extends 'base.html' %} {% block content %}
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-12 col-md-9">
-      <div class="col-sm-7 offset-sm-5">
-        <h2 class="mainTitle text-center text-white">
-          What Meal Are You Having Today?
-        </h2>
-      </div>
-      <div class="col-sm-7 offset-sm-5 innerCol">
-        <a href="#">
-          <img
-            src="../static/img/breakfast.jpg"
-            class="card-img"
-            alt="Breakfast Image"
-          />
-          <div class="card-img-overlay text-center">
-            <h2 class="card-title"><strong>Breakfast</strong></h2>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-7 offset-sm-5 innerCol">
-        <a href="#">
-          <img
-            src="../static/img/lunch.jpg"
-            class="card-img"
-            alt="Lunch Image"
-          />
-          <div class="card-img-overlay text-center">
-            <h2 class="card-title"><strong>Lunch</strong></h2>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-7 offset-sm-5 innerCol">
-        <a href="#">
-          <img
-            src="../static/img/dinner.jpg"
-            class="card-img"
-            alt="Dinner Image"
-          />
-          <div class="card-img-overlay text-center">
-            <h2 class="card-title"><strong>Dinner</strong></h2>
-          </div>
-        </a>
-      </div>
+<div class="row">
+  <div class="col-sm-10 offset-sm-2">
+    <h3 class="text-white py-5">See Our Most Popular Recipes</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3 offset-sm-2 innerCol">
+    <a href="#">
+      <img
+        src="../static/img/breakfast.jpg"
+        class="img-fluid"
+        alt="Breakfast Image"
+      />
+    </a>
+  </div>
+  <div class="col-sm-3 innerCol">
+    <a href="#">
+      <img src="../static/img/lunch.jpg" class="img-fluid" alt="Lunch Image" />
+    </a>
+  </div>
+  <div class="col-sm-3 innerCol">
+    <a href="#">
+      <img
+        src="../static/img/lunch.jpg"
+        class="img-fluid"
+        alt="Dinner Image"
+      />
+    </a>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-10 offset-sm-2">
+      <h3 class="text-white py-5">
+        Your Favourite Recipes
+      </h2>
     </div>
-    <div class="col-sm-12 col-md-3">
-      <div class="col-sm-10 offset-sm-2">
-        <h2 class="mainTitle text-center text-white">
-          Fancy A Snack Instead?
-        </h2>
-      </div>
-      <div class="col-sm-10 offset-sm-2">
-        <a href="#">
-          <img
-            src="../static/img/snack.jpg"
-            class="card-img"
-            alt="Snacks Image"
-          />
-        </a>
-      </div>
-      <div class="col-sm-10 offset-sm-2">
-        <h2 class="mainTitle text-center text-white">
-          Our Most Popular Recipes
-        </h2>
-      </div>
-      <div class="col-sm-10 offset-sm-2">
+    <div class="col-sm-3 offset-sm-2">
+      <a href="#">
+        <img
+          src="../static/img/snack.jpg"
+          class="img-fluid"
+          alt="Snacks Image"
+        />
+      </a>
+    </div>
+    <div class="col-sm-3">
+      <a href="#">
+        <img
+          src="../static/img/popular.jpg"
+          class="img-fluid"
+          alt="Popular Link Image"
+        />
+      </a>
+    </div>
+    <div class="col-sm-3">
         <a href="#">
           <img
             src="../static/img/popular.jpg"
-            class="card-img"
+            class="img-fluid"
             alt="Popular Link Image"
           />
         </a>
       </div>
-    </div>
   </div>
+  {% endblock %}
 </div>
-{% endblock %}

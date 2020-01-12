@@ -1,54 +1,51 @@
 {% extends 'base.html' %} {% block content %}
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-12 col-md-9">
-      <div class="col-sm-7 offset-sm-5">
-        <h2 class="mainTitle text-center text-white">
-          Everyone Loves These!
-        </h2>
-      </div>
-      <div class="col-sm-7 offset-sm-5 innerCol">
-        <a href="{{ url_for('chocbansmoothie') }}">
-          <img
-            src="../static/img/chocolateBananaSmoothie.jpg"
-            class="card-img"
-            alt="Chocolate banana smoothie image"
-          />
-          <div class="card-img-overlay text-center">
-            <h2 class="card-title">
-              <strong>Chocolate and Banana Smoothie</strong>
-            </h2>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-7 offset-sm-5 innerCol">
-        <a href="{{ url_for('blueberrypancakes') }}">
-          <img
-            src="../static/img/blueberryPancakes.jpg"
-            class="card-img"
-            alt="Blueberry pancakes image"
-          />
-          <div class="card-img-overlay text-center">
-            <h2 class="card-title">
-              <strong>Banana and Blueberry Pancakes</strong>
-            </h2>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-7 offset-sm-5 innerCol">
-        <a href="{{ url_for('broccolimacandcheese') }}">
-          <img
-            src="../static/img/macAndCheese.jpg"
-            class="card-img"
-            alt="Mac and cheese image"
-          />
-          <div class="card-img-overlay text-center">
-            <h2 class="card-title"><strong>Broccoli Mac and Cheese</strong></h2>
-          </div>
-        </a>
-      </div>
+<div class="row">
+  <div class="col-sm-12 col-md-9">
+    <div class="col-sm-7 offset-sm-5">
+      <h2 class="mainTitle text-center text-white">
+        Everyone Loves These!
+      </h2>
     </div>
-
-    {% endblock %}
+    <div class="col-sm-7 offset-sm-5 innerCol">
+      <a href="{{ url_for('chocbansmoothie') }}">
+        <img
+          src="../static/img/recipes/chocolateBananaSmoothie.jpg"
+          class="card-img"
+          alt="Chocolate banana smoothie image"
+        />
+        <div class="card-img-overlay text-center">
+          <h2 class="card-title">
+            <strong>Chocolate and Banana Smoothie</strong>
+          </h2>
+        </div>
+      </a>
+    </div>
+    <div class="col-sm-7 offset-sm-5 innerCol">
+      <a href="{{ url_for('blueberrypancakes') }}">
+        <img
+          src="../static/img/recipes/blueberryPancakes.jpg"
+          class="card-img"
+          alt="Blueberry pancakes image"
+        />
+        <div class="card-img-overlay text-center">
+          <h2 class="card-title">
+            <strong>Banana and Blueberry Pancakes</strong>
+          </h2>
+        </div>
+      </a>
+    </div>
+    <div class="col-sm-7 offset-sm-5 innerCol">
+      <a href="{{ url_for('broccolimacandcheese') }}">
+        <img
+          src="../static/img/recipes/macAndCheese.jpg"
+          class="card-img"
+          alt="Mac and cheese image"
+        />
+        <div class="card-img-overlay text-center">
+          <h2 class="card-title"><strong>Broccoli Mac and Cheese</strong></h2>
+        </div>
+      </a>
+    </div>
   </div>
 </div>
+{% endblock %}

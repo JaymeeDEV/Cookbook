@@ -1,56 +1,91 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis");
-$bg: url("../img/background-img-main.jpg");
 
-/*All colours stored in an array*/
+/* Colours Stored In An Array*/
 $colors: (
   cardTitle: #ffffff,
   button: #353d44,
-  hoverButton: #0095ff
+  hoverButton: #0095ff,
+  navText: #fffff0
 );
 
-/*Function uses colours from the 'colors' array*/
+/*Function Uses 'Colors' Array*/
 @function color($all-colors) {
   @return map-get($colors, $all-colors);
 }
-/*General style rules*/
+
+/* General Style Rules*/
 html,
 body {
-  background-image: $bg;
-  background-position: center;
-  background-size: cover;
+  background-color: #32363c;
   font-family: "Dosis", cursive;
   margin: 0;
   padding: 0;
 }
-.collapse {
-  padding-right: 110px;
+
+// Horizontal Navbar
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  left: 30px;
+  top: 0;
+  z-index: 1;
+  padding-top: 45px;
+  overflow-x: hidden;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  font-size: 18px;
+  display: block;
+  color: color(navText);
+}
+
+.navText {
+  color: color(navText);
+}
+
+.main-title {
+  padding-bottom: 100px !important;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.navbar-brand {
+  font-size: 23px !important;
+}
+
+.nav-link {
+  font-size: 18px;
+}
+
+.setup-container {
+  margin-top: 100px;
+}
+
+.products-button {
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container-fluid {
   .row {
-    .col-sm-12 {
+    .col-5 {
       //index.html
-      .mainTitle {
-        padding: 20px;
-        font-weight: bold;
-        line-height: 1.2;
-      }
       .innerCol {
         margin-bottom: 30px;
         .card {
           border: 1px solid rgba(0, 0, 0, 0);
           border-width: 10px;
         }
-        .card-img-overlay {
-          .card-title {
-            margin-top: 50px;
-            color: color(cardTitle);
-          }
-        }
-      }
-      //contact.html
-      .mar {
-        margin: 20px;
       }
       form {
         .control-group {

@@ -14,5 +14,4 @@ pycodestyle==2.5.0
 pylint==2.1.1
 pymongo==3.7.2
 six==1.11.0
-Werkzeug==0.14.1
 wrapt==1.10.11
