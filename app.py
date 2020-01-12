@@ -27,6 +27,21 @@ def popular():
     return render_template("popular.html")
 
 
+@app.route('/breakfast', methods=['POST', 'GET'])
+def breakfast():
+    return render_template("breakfast.html")
+
+
+@app.route('/lunch', methods=['POST', 'GET'])
+def lunch():
+    return render_template("lunch.html")
+
+
+@app.route('/dinner', methods=['POST', 'GET'])
+def dinner():
+    return render_template("dinner.html")
+
+
 @app.route('/contact', methods=['POST', 'GET'])
 def contact():
     return render_template("contact.html")
