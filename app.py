@@ -48,17 +48,29 @@ def contact():
 
     """ Recipe Pages"""
 
-
+# Snacks
 @app.route('/chocolatebananasmoothie', methods=['POST', 'GET'])
 def chocbansmoothie():
     return render_template("snacks/chocbansmoothie.html", recipes=db.recipes.find())
 
-
+# Breakfast
 @app.route('/blueberrypancakes', methods=['POST', 'GET'])
 def blueberrypancakes():
     return render_template("breakfast/blueberrypancakes.html", recipes=db.recipes.find())
 
 
+@app.route('/chocolatebananaporridge', methods=['POST', 'GET'])
+def chocolatebananaporridge():
+    return render_template("breakfast/chocobanporridge.html", recipes=db.recipes.find())
+
+
+@app.route('/breakfastberryparfait', methods=['POST', 'GET'])
+def breakfastberryparfait():
+    return render_template("breakfast/berryparfait.html", recipes=db.recipes.find())
+
+# Lunch
+
+# Dinner
 @app.route('/broccolimacandcheese', methods=['POST', 'GET'])
 def broccolimacandcheese():
     return render_template("dinner/brocmacandcheese.html", recipes=db.recipes.find())
