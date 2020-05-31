@@ -44,10 +44,6 @@ def dinner():
     return render_template("dinner.html")
 
 
-@app.route('/contact', methods=['POST', 'GET'])
-def contact():
-    return render_template("contact.html")
-
     """ Recipe Pages"""
 
 # Snacks
