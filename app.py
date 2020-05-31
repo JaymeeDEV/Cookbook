@@ -14,7 +14,9 @@ db = client.cookbookdb
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
-    return render_template("index.html")
+    popular_recipe_ids=[ObjectId("5c6ef1771c9d440000dc9420")]
+    popular_recipes=db.recipes.find({"_id":ObjectId("5c6ef1771c9d440000dc9420")})
+    return render_template("index.html", popular_recipes=popular_recipes)
 
 
 @app.route('/products', methods=['POST', 'GET'])
